@@ -58,7 +58,7 @@
 
 ## 部署到 GitHub Pages
 
-仓库名必须是 `wmej.github.io`：
+仓库名是 `wmej.github.io`，绑定的自定义域名是 `wmej.space`：
 
 ```bash
 git add .
@@ -66,7 +66,11 @@ git commit -m "update"
 git push
 ```
 
-仓库 **Settings → Pages**：Source 选 `Deploy from a branch`，Branch 选 `master`（或 `main`）/ `/ (root)`，保存后等 1–2 分钟，访问 `https://wmej.github.io`。
+仓库 **Settings → Pages**：Source 选 `Deploy from a branch`，Branch 选 `master`（或 `main`）/ `/ (root)`。
+
+自定义域名写在仓库根目录的 `CNAME` 文件里（内容为 `wmej.space`）。**这个文件不要删**，丢了域名会被重置回 `wmej.github.io`。
+
+保存后等 1–2 分钟，访问 `https://wmej.space`。
 
 ## 本地预览
 

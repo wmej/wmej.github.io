@@ -15,7 +15,7 @@
 
 这个仓库就是我的博客。纯静态，没有后端，想起来就写。
 
-**[wmej.github.io](https://wmej.github.io)**
+**[wmej.space](https://wmej.space)**
 
 ## 找我
 
