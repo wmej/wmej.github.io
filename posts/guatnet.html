@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wmej·校园网自动认证工具</title>
+<meta name="description" content="给学校校园网写的一个自动认证小工具，以及过程中学到的几件事。">
+<meta name="theme-color" content="#FDFCFA">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap site-top">
+    <div>
+      <a class="site-title" href="../index.html">Wmej</a>
+      <p class="site-desc">写点东西，记点事。</p>
+    </div>
+    <nav class="site-nav">
+      <a href="../index.html">首页</a>
+      <a href="../about.html">关于</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <article>
+    <header class="post-head">
+      <h1 class="post-title">校园网自动认证工具</h1>
+      <p class="post-meta">2026 年 11 月 26 日 · 开发</p>
+    </header>
+
+    <div class="post-body">
+      <p>今天把 GuatNet 做完了。</p>
+      <p>它是给学校校园网写的小工具：开机后待在托盘里，发现没认证就去门户提交一次登录，断线了自己重连。界面能填账号密码、选运营商、开开机自启，日志实时滚动。</p>
+      <p>最费劲的不是写代码，是搞懂认证协议。一开始照网上找的 Dr.COM 老接口抄，路径和端口全对不上，一直 404。后来开了抓包，从门户自己的请求里才看到真实地址是 801 端口的 eportal 接口，参数里还得带上「你从哪个 IP 来」。最反直觉的是返回里的 result 字段——0 是失败，1 才是成功，跟大多数接口正好相反。</p>
+      <p>还学了点以前没碰过的东西：Windows 的 DPI 感知（不声明的话高分屏上字是糊的）、无边框窗口怎么做拖动、托盘图标、注册表开机自启。</p>
+      <p>写完打了安装包，源码传到了 GitHub。第一次把一个小工具从协议一路做到发布，比想象中琐碎，也比想象中有意思。</p>
+    </div>
+
+  </article>
+
+</main>
+
+<footer class="site-foot">
+  <p>© 2026 Wmej</p>
+</footer>
+
+</body>
+</html>
